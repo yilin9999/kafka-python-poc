@@ -18,3 +18,8 @@ run:
 lint:
 	@echo $(TAG)Running Lint$(END)
 	sh -c ' . venv/bin/activate ; flake8 *.py --count --ignore=E501,E126'
+
+docker-kafka-run:
+	@echo $(TAG)Running kafka container$(END)
+	docker-compose -f docker/docker-compose.yml up -d
+
